@@ -3,7 +3,13 @@ import { observer, inject } from 'mobx-react';
 import logo from './logo.svg';
 import './App.css';
 
+const capSize = txt => txt.toUpperCase()
+
 class App extends Component {
+  componentDidMount(){
+     this.props.employeeStore.loadEmployees();
+  }
+
   render() {
     const {employeeStore} = this.props;
     console.log(this.props);
@@ -14,15 +20,15 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          Viva La Revolucion!
+          OM SHANTI OM
         </p>
         <hr />
         <ul>
-          {employeeStore.employees.map(employee => (<li>{employee}</li>))}
+          {employeeStore.employees.map(
+            employee => (<li>{capSize(employee.name.last)},{capSize(employee.name.first)} - {capSize(employee.nat)}</li>)
+          )}
         </ul>
         <hr />
-        <button onClick={() => employeeStore.add()}>ADD</button><br /><br />
-        <button onClick={() => employeeStore.show()}>SHOW</button><br /><br />
         <button onClick={() => employeeStore.remove()}>REMOVE</button><br /><br />
         {employeeStore.strength}
       </div>

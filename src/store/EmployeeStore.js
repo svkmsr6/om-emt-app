@@ -1,11 +1,13 @@
 import { 
-    //extendObservable, 
+    //extendObservable,   
+    configure,  
     observable,
     action,
     decorate, 
     computed 
 } from 'mobx';
 
+configure({enforceActions: true})
 class EmployeeStore{
     //constructor(){
         // extendObservable(this, {
@@ -21,17 +23,20 @@ class EmployeeStore{
         return this.employees.length;
     }
 
-    add(){
-        this.employees.push('Rafael Somoza');
+    loadEmployees(){
+        fetch('https://randomuser.me/api/?results=5&seed=om')
+        .then(resp => resp.json())
+        .then(data => this.updateList(data.results))
+    }
+
+    updateList(employees){
+        this.employees = employees;
     }
 
     remove(){
         this.employees.pop();
     }
 
-    show(){
-        console.log(this.employees);
-    }
 }
 
 decorate(EmployeeStore,{
@@ -39,6 +44,8 @@ decorate(EmployeeStore,{
    add:action,
    remove:action,
    show:action,
+   updateList:action,
+   loadEmployees: action,
    strength:computed
 });
 
