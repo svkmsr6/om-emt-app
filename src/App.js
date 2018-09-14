@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -16,12 +16,18 @@ class App extends Component {
         <p className="App-intro">
           Viva La Revolucion!
         </p>
+        <hr />
+        <ul>
+          {employeeStore.employees.map(employee => (<li>{employee}</li>))}
+        </ul>
+        <hr />
         <button onClick={() => employeeStore.add()}>ADD</button><br /><br />
         <button onClick={() => employeeStore.show()}>SHOW</button><br /><br />
+        <button onClick={() => employeeStore.remove()}>REMOVE</button><br /><br />
         {employeeStore.strength}
       </div>
     );
   }
 }
 
-export default observer(App);
+export default inject('employeeStore')(observer(App));

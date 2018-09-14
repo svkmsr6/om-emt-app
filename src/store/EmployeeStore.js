@@ -1,15 +1,25 @@
-import { extendObservable, computed } from 'mobx';
+import { 
+    //extendObservable, 
+    observable,
+    action,
+    decorate, 
+    computed 
+} from 'mobx';
 
-export default class EmployeeStore{
-    constructor(){
-        extendObservable(this, {
-            employees:['Antonio Durante','Franco Orafo'],
-            get strength(){
-                return this.employees.length;
-            }
-            //employeeStrength: computed(() => this.employees.length)
-        });
-    }    
+class EmployeeStore{
+    //constructor(){
+        // extendObservable(this, {
+        //     employees:['Antonio Durante','Franco Orafo'],
+        //     get strength(){
+        //         return this.employees.length;
+        //     }
+        // });
+    //}   
+    employees = [];
+
+    get strength(){
+        return this.employees.length;
+    }
 
     add(){
         this.employees.push('Rafael Somoza');
@@ -23,3 +33,14 @@ export default class EmployeeStore{
         console.log(this.employees);
     }
 }
+
+decorate(EmployeeStore,{
+   employees:observable,
+   add:action,
+   remove:action,
+   show:action,
+   strength:computed
+});
+
+export default EmployeeStore;
+
