@@ -1,0 +1,27 @@
+.App-logo {
+    height: 40px;
+    cursor: pointer;
+  }
+
+.App-logo:hover {
+    height: 50px;
+}
+  
+.App-header {
+    background-color: rgb(253, 98, 8);
+    font-size: 15px;
+    height: 75px;
+    padding: 30px;
+    color: rgb(90, 5, 5);
+}
+
+.App-header:hover {
+    background-color: orange;
+}
+
+.App-title {    
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+}
+  

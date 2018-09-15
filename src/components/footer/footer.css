@@ -1,0 +1,14 @@
+.App-footer{
+    background-color: green;
+    color: yellow;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    cursor:pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.App-footer:hover{
+    background-color: rgb(20, 165, 20);
+    font-size: 22px;
+}
