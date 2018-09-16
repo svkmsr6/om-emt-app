@@ -5,10 +5,12 @@ import './header.css';
 export default class Header extends Component {
   render() {
     return (
-      <header className="App-header">
+      <div className="jumbotron">
         <img src={`/om.png`} className="App-logo" alt="logo" />
-        <h2 className="App-title">EMPLOYEE MANAGEMENT TOOL</h2>
-      </header>
+        <br />
+        <br />
+        <h3>EMPLOYEE MANAGEMENT TOOL</h3>
+      </div>
     )
   }
 }

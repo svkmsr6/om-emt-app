@@ -24,7 +24,7 @@ class EmployeeStore{
     }
 
     loadEmployees(){
-        fetch('https://randomuser.me/api/?results=5&seed=om')
+        fetch('https://randomuser.me/api/?results=8&seed=om')
         .then(resp => resp.json())
         .then(data => this.updateList(data.results))
     }

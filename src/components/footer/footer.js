@@ -4,9 +4,9 @@ import './footer.css';
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="App-footer">
-        <p>© ANJANEYA SOFTWARES</p>
-      </footer>
+      <div className="App-footer jumbotron">
+        <h5>©SHREE ANJANEYA SOFTWARES 2018</h5>
+      </div>
     )
   }
 }

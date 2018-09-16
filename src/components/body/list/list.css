@@ -1,0 +1,17 @@
+.App-employee{
+    display: flex;
+    cursor: pointer;
+    height: 55px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.App-employee:hover{
+   background-color: rgb(18, 109, 206);  
+   color: beige;  
+   font-weight: bold;  
+}
+
+.App-employee-img {
+    align-self: center;
+    margin-right: 2%;
+}

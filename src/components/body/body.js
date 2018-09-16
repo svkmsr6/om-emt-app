@@ -17,7 +17,7 @@ class Body extends Component {
   }
 
   selectEmployee(idx){
-      this.setState({selectedID: idx})
+      this.setState({selectedID: idx});
   }
 
   render() {

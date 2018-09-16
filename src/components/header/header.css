@@ -1,22 +1,15 @@
 .App-logo {
     height: 40px;
     cursor: pointer;
-  }
+}
+
+.jumbotron {
+    height: 188px;
+    margin-bottom: -14px;
+}
 
 .App-logo:hover {
     height: 50px;
-}
-  
-.App-header {
-    background-color: rgb(253, 98, 8);
-    font-size: 15px;
-    height: 75px;
-    padding: 30px;
-    color: rgb(90, 5, 5);
-}
-
-.App-header:hover {
-    background-color: orange;
 }
 
 .App-title {    
