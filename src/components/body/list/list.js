@@ -3,7 +3,7 @@ import './list.css';
 
 export default class List extends Component {
   render() {
-    const {employees, selectEmployee, capSize} = this.props;
+    const {employees, selectEmployee, capSize, downSize} = this.props;
     return (
     <React.Fragment>
       <ul className="list-group">
@@ -12,8 +12,9 @@ export default class List extends Component {
         <li key={idx} className="App-employee list-group-item" onClick={() => selectEmployee(idx)}>
           <div className="App-employee-img">
             <img src={employee.picture.thumbnail} alt={idx} />
-          </div>
-          <p>{capSize(employee.name.first)} {capSize(employee.name.last)} - {capSize(employee.nat)}</p>
+            <p style={{paddingLeft: 20}}>{capSize(employee.name.first)} {capSize(employee.name.last)}</p>
+          </div>          
+          <div className={`flag flag-${downSize(employee.nat)}`} alt="logo" />
         </li>        
       ))}
       </ul>

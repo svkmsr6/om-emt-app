@@ -3,6 +3,7 @@
     cursor: pointer;
     height: 55px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: space-evenly;
 }
 
 .App-employee:hover{
@@ -14,4 +15,7 @@
 .App-employee-img {
     align-self: center;
     margin-right: 2%;
+    display:flex;
+    justify-content: flex-start;
+    flex: 0 0 220px;
 }

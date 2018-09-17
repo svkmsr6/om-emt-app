@@ -3,6 +3,7 @@ import { observer, inject } from 'mobx-react';
 import List from './list/list';
 
 const capSize = txt => txt.toUpperCase()
+const downSize = txt => txt.toLowerCase()
 
 class Body extends Component {
   constructor(){
@@ -29,6 +30,7 @@ class Body extends Component {
             employees={employeeStore.employees} 
             selectEmployee={idx => this.selectEmployee(idx)}
             capSize={capSize}
+            downSize={downSize}
           />
       </React.Fragment>
     )
