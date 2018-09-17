@@ -5,7 +5,7 @@
 
 .jumbotron {
     height: 188px;
-    margin-bottom: -14px;
+    margin-bottom: 0px; 
 }
 
 .App-logo:hover {

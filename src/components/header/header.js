@@ -8,9 +8,10 @@ export default class Header extends Component {
       <div className="jumbotron">
         <img src={`/img/om.png`} className="App-logo" alt="logo" />
         {/* <div className="flag flag-fi" alt="logo" /> */}
+        {/* <br /> */}
         <br />
         <br />
-        <h3>EMPLOYEE MANAGEMENT TOOL</h3>
+        <h4>EMPLOYEE SURVEILLANCE TOOL</h4>
       </div>
     )
   }

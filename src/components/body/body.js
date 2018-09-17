@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import List from './list/list';
+import Info from './info/info';
 
 const capSize = txt => txt.toUpperCase()
 const downSize = txt => txt.toLowerCase()
@@ -25,14 +26,18 @@ class Body extends Component {
     const {employeeStore} = this.props;
     // console.log(this.props);
     return (
-      <React.Fragment>
+      <div style={{display:'flex'}}>
           <List 
             employees={employeeStore.employees} 
             selectEmployee={idx => this.selectEmployee(idx)}
             capSize={capSize}
             downSize={downSize}
           />
-      </React.Fragment>
+          <Info
+            employee={(this.state.selectedID >=0)?employeeStore.employees[this.state.selectedID]:null} 
+            selectEmployee={idx => this.selectEmployee(idx)}
+          />
+      </div>
     )
   }
 }
