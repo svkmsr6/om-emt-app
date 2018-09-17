@@ -19,6 +19,7 @@ class Body extends Component {
   }
 
   selectEmployee(idx){
+      console.log('Selected ID,',idx);
       this.setState({selectedID: idx});
   }
 
@@ -36,6 +37,8 @@ class Body extends Component {
           <Info
             employee={(this.state.selectedID >=0)?employeeStore.employees[this.state.selectedID]:null} 
             selectEmployee={idx => this.selectEmployee(idx)}
+            capSize={capSize}
+            downSize={downSize}
           />
       </div>
     )

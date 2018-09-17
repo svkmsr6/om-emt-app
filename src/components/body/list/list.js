@@ -18,7 +18,7 @@ export default class List extends Component {
             <img src={employee.picture.thumbnail} alt={idx} />
             <p style={{paddingLeft: 20}}>{capSize(employee.name.first)} {capSize(employee.name.last)}</p>
           </div>          
-          <div className={`flag flag-${downSize(employee.nat)}`} alt="logo" />
+          <div className={`flag flag-${downSize(employee.nat)}`} title={employee.nat}  />
         </li>        
       ))}
       </ul>
