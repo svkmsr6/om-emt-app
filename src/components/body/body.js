@@ -33,6 +33,7 @@ class Body extends Component {
             selectEmployee={idx => this.selectEmployee(idx)}
             capSize={capSize}
             downSize={downSize}
+            selectedID={this.state.selectedID}
           />
           <Info
             employee={(this.state.selectedID >=0)?employeeStore.employees[this.state.selectedID]:null} 
