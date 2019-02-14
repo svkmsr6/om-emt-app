@@ -5,7 +5,7 @@ export default class List extends Component {
   render() {
     const {employees, selectEmployee, capSize, downSize, selectedID} = this.props;
     return (
-    <React.Fragment>
+    //<React.Fragment>
       <ul className="list-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
       {employees.map(
         (employee, idx) => (
@@ -29,7 +29,7 @@ export default class List extends Component {
         </li>        
       ))}
       </ul>
-    </React.Fragment>
+    //</React.Fragment>
     )
   }
 }

@@ -27,7 +27,7 @@ class Body extends Component {
     const {employeeStore} = this.props;
     // console.log(this.props);
     return (
-      <div style={{display:'flex'}}>
+      <div className="row">
           <List 
             employees={employeeStore.employees} 
             selectEmployee={idx => this.selectEmployee(idx)}
